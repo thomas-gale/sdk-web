@@ -17,3 +17,6 @@ FROM mcr.microsoft.com/vscode/devcontainers/typescript-node:0-${VARIANT}
 
 # Install rust
 RUN curl https://sh.rustup.rs -sSf | sh -s -- -y
+
+# Grab grpc-web
+RUN curl -L  https://github.com/grpc/grpc-web/releases/download/1.2.1/protoc-gen-grpc-web-1.2.1-linux-x86_64 -o $HOME/protoc-gen-grpc-web
